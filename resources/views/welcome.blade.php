@@ -6,6 +6,9 @@
 
         <title>Laravel</title>
 
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
@@ -36,7 +39,7 @@
 
             .top-right {
                 position: absolute;
-                right: 10px;
+                right: 30px;
                 top: 18px;
             }
 
@@ -61,29 +64,95 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .link-darwin{
+
+                text-decoration:none;
+                margin-left:20px;
+                color:white;
+                font-weight:600;
+                font-size:20px;
+            }
+
+            .link-darwin:hover{
+                color:whitesmoke;
+            }
+
+            .image-logo{
+                width:80px;
+                margin:10px 10px;
+
+
+            }
+
+            .logo-part{
+                display:flex;
+              
+                align-items:center;
+            }
+            .text-logo{
+
+                display:flex;
+                flex-direction:column;
+                margin-left:10px;
+            }
+            .navbar-brandx{
+
+                text-decoration:none;
+                color:white;
+                font-size:22px;
+                font-weight:bold;
+            }
+
+            .navbar-brandx:hover{
+            color:whitesmoke;
+            
+            }
+            .mlgcl{
+                font-size:35px;
+                font-weight:bold;
+            }
+            .covid{
+                font-size:18px;
+                font-weight:bold;
+
+            }
+
+            .ul-flex{
+
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                position: absolute;
+                right:50px;
+                color:white;
+            }
+           
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+
+ 
+
+
+
+
+
+
 
             <div class="content">
+
+            
+            @extends('layouts.template')
+  
+
+  
+
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
+               
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -96,5 +165,9 @@
                 </div>
             </div>
         </div>
+
+
+
+       
     </body>
 </html>
