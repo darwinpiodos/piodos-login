@@ -136,17 +136,89 @@
  
 
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+<div class="container-fluid">
+
+<div class="logo-part">
+
+        <div class="picture-logo">
+            <a href="#">                
+            <img src="image/logo-mlg.png" class="image-logo">
+            </a>
+        </div>
+           
+        <div class="text-logo">
+            <a class="navbar-brandx mlgcl " href="#">MLGCL</a>
+            <a class="navbar-brandx covid" href="#">COVID-19 CONTACT TRACING SYSTEM</a>
+        </div>
+            
+       
+
+</div>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+
+  <ul class="navbar-nav ul-flex">
+
+
+
+  @if (Route::has('login'))
+                @auth
+
+                
+                    <li class="nav-item">
+                        <a href="{{ url('/home') }}" class="link-darwin">Home</a>    
+                    </li>
+                   
+                @else
+                    <li class="nav-item">
+                        <a href="{{ route('login') }}" class="link-darwin">Login</a>
+                    </li>
+
+                    @if (Route::has('register'))
+
+                    <li class="nav-item">
+                        <a href="{{ route('register') }}" class="link-darwin">Register</a>
+                    </li>
+                    @endif
+                @endauth
+
+        @endif
+
+
+
+ 
+  </ul>
+
+
+
+</div>
+</div>
+</nav>
 
 
 
 
+
+
+
+
+
+
+
+
+    
 
             <div class="content">
 
             
-            @extends('layouts.template')
-  
-
+         
   
 
                 <div class="title m-b-md">
